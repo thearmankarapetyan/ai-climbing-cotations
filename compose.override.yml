@@ -1,0 +1,18 @@
+services:
+  app:
+    networks:
+      - ai
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    environment:
+      HNAME: blablabla
+      HUSER: blablabla 
+      HPASSWORD: blablabla 
+      HDATABASE: blablabla 
+      HPORT: blablabla
+      OPENAI_API_KEY: blablabla
+    command: python3 main.py
+networks:
+  ai:
+    external: true

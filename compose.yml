@@ -1,0 +1,8 @@
+services:
+  app:
+    container_name: api-climbing-cotations
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
